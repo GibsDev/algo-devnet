@@ -3,7 +3,9 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const path = require('path');
 
-module.exports = async ({ root = './devnet', template = './devnet_network_template.json', name = 'devnet' } = {}) => {
+const DEFAULT_TEMPLATE = path.resolve(__dirname , './devnet_network_template.json');
+
+module.exports = async ({ root = './devnet', template = DEFAULT_TEMPLATE, name = 'devnet' } = {}) => {
 	await assertGoalCommandAvailableInPath();
 	try {
 		try {
