@@ -1,0 +1,15 @@
+{
+	"name": "algo-devnet",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "node test.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"algosdk": "^1.12.0"
+	}
+}
