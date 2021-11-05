@@ -116,7 +116,7 @@ async function getPID(nodePath) {
 async function getServerInfo(nodePath) {
 	const serverString = (await fs.readFile(path.resolve(nodePath, 'algod.net'))).toString();
 	const split = serverString.split(':');
-	return { hostname: split[0], baseServer: 'https://' + split[0], port: Number(split[1]) };
+	return { hostname: split[0], baseServer: 'http://' + split[0], port: Number(split[1]) };
 }
 
 // Network needs to be running
